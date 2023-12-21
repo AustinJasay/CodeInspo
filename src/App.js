@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap';
+import Header from './components/Header';
+import ProjectIdeaPage from './pages/ProjectIdeaPage';
+import HomePage from './pages/HomePage';
+import { Container } from 'reactstrap';
 
 function App() {
+  useEffect(() => {
+    document.body.className = `bg-dark`;
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div className='App'>
+        <Header />
+        <Container className='mb-3'>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/:projectId' element={<ProjectIdeaPage />} />
+          </Routes>
+        </Container>
+      </div>
+    </>
   );
 }
 

@@ -2,15 +2,38 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
+.card {
+  border-width: 0px !important;
+}
+
+.logo {
+  height: 75px;
   pointer-events: none;
+  /* animation: App-logo-spin infinite 20s linear; */
+}
+
+.myshadow {
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.546) !important;
+}
+
+.navbar-brand {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+  user-select: none;
+  width: fit-content;
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s ease-in-out;
   }
+}
+
+.bg-midnight {
+  background-color: #00092d !important;
 }
 
 .App-header {
