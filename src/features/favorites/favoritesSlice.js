@@ -29,6 +29,5 @@ export const favoritesReducer = favoritesSlice.reducer;
 export const { addFavorite, removeFavorite } = favoritesSlice.actions;
 
 export const getFavorites = (state) => {
-  console.log(state.favorites.favoritesArray);
   return state.favorites.favoritesArray;
 };

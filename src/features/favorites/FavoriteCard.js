@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeFavorite } from './favoritesSlice';
 
 const FavoriteCard = ({ project, close }) => {
+  console.log(project);
   const dispatch = useDispatch();
   return (
     <Card className={'mt-3'}>

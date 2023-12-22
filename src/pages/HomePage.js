@@ -11,6 +11,10 @@ const HomePage = () => {
       <Link to={`/${nextId}`} className='h2 text-white'>
         Get ideas!
       </Link>
+      <p>
+        Most of the content of the app is currently filler. This will be updated
+        and new features will be rolled out in the near future. Happy Holidays!
+      </p>
     </>
   );
 };

@@ -8,14 +8,14 @@ import ProjectDetailsCard from '../features/projects/ProjectDetailsCard.js';
 const ProjectIdeaPage = () => {
   const { projectId } = useParams();
   const project = useSelector(getProjectById(Number(projectId)));
-  const { id, title, description, difficulty, optional } = project;
+  const { title, description } = project;
 
   return (
     <div>
       <Col>
         <Row className='justify-content-center'>
           <ProjectDescriptionCard project={{ title, description }} />
-          <ProjectDetailsCard project={{ id, optional, difficulty }} />
+          <ProjectDetailsCard project={project} />
         </Row>
       </Col>
     </div>
